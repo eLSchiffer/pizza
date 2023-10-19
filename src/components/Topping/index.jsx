@@ -1,10 +1,13 @@
+
 import Check from "../Check";
 import './style.css';
 
-const Topping = ({ topping }) => {
+const Topping = ({ topping, status, onPick }) => {
+
+
   return (
     <div className="topping">
-      <Check />
+      <Check status={status} onChange={onPick} />
       <span className="topping__content">
         {topping.name}: {topping.price} €
       </span>
